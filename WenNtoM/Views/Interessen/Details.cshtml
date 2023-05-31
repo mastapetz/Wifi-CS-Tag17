@@ -1,0 +1,24 @@
+﻿@model WenNtoM.Models.Interessen
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Interessen</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Interessen1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Interessen1)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.InteressenId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

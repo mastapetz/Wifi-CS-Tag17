@@ -1,0 +1,42 @@
+﻿@model WebSteuer.Models.SteuerModel
+<h1> Steuerberechnung</h1>
+<div >
+    <form asp-action="Berechnen"  class="border border-1">
+        <div class="row" >
+            <div class="col-md-3">
+                <label class="contol-label"> Eingabe Jahresgehalt</label>
+            </div>
+            <div class="col-md-2">
+                <input class="form-control" asp-for="Jahresgehalt" type="number" />
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" id="Berechnen" value="Steuer Berechnen" class="btn btn-primary" />
+        </div>
+    </form>
+    <br />
+    <div class="row border border-1">
+        <div class="col-md-3">
+            <label class="control-label">Jahressteuer </label>
+        </div>
+        
+        <div class="col-md-2">
+            @Html.DisplayFor(model => model.Jahressteuer)
+        </div>
+
+    </div>
+
+     <br />
+
+    <div class="row border border-1">
+        <div class="col-md-3">
+            <label class="control-label">Netto Jahresgehalt </label>
+        </div>
+        
+        <div class="col-md-2">
+            @Html.DisplayFor(model => model.Nettojahresgehalt)
+        </div>
+
+    </div>
+
+</div>
